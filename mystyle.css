@@ -1,0 +1,28 @@
+body {
+  background-color: lightblue;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  color: yellow;
+  text-decoration: underline;
+  font-size: 60;
+  text-decoration-color: blue;
+  margin-left: 20px;
+}
+Body { text-align: center;
+  vertical-align: top;
+}
+P { text-align: center;
+  font-size: 23;
+font-family: 'Roboto', sans-serif;
+vertical-align:top;
+ }
+H2 { text-align: center
+}
+UL { text-align: center;
+  font-family: 'PT Sans', sans-serif;
+}
+ul {
+  list-style-type: none;
+}
