@@ -2,12 +2,11 @@ body {
   background-color: lightblue;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-
 }
 
 h1 {
   color: navy;
-  font-size: 60;
+  font-size: 65;
   text-decoration: underline;
   margin-left: 20px;
 }
@@ -15,7 +14,7 @@ Body { text-align: center;
   vertical-align: top;
 }
 P { text-align: center;
-  font-size: 30;
+  font-size: 35;
 font-family: 'PT Serif', serif;
 font-style: italic;
 color: yellow;
