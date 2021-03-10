@@ -166,3 +166,8 @@ ul li {display:inline;
   clear: both;
   display: table;
 }
+
+.preview {
+    display: inline-block;
+    margin: 0 40px 0 0;
+}
