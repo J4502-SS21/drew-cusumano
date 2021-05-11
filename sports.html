@@ -10,9 +10,7 @@
   <meta name="author" content="Drew Cusumano">
   <meta name="keywords" content="Drew Cusumano, J4502"/>
 </head>
-
 <body>
-
   <header>
     <div class="container">
 <h1 class="logo.png"></h1>
@@ -29,24 +27,148 @@
       </nav>
     </div>
   </header>
-  <p><h1>Meet Our Teams </h1>
+  <p><h1><center>Meet Our Teams</center> </h1>
 
     <div class="grid-container">
       <div class="grid-item"><img src="blues.jpg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></div>
-      <div class="grid-item"><img src="cityfc.jpg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></div>
-      <div class="grid-item"><img src="cardinals.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></div>
+      <div class="grid-item"><img src="cityfc.jpg" style="float: left; width:30%; margin-right: 1%; margin-bottom: 0.5em; ></div>
+      <div class="grid-item"><img src="cardinals.png" style="float: left; width: 30%; margin-right:1%; margin-bottom: 0.5em;"></div>
     </div>
 
 </p>
+<p><center>==================================================================================================================================================================================================</center></p>
+
+    <h1><center>The Greatest Moments From St. Louis Sports</center></h1>
+
+    <div class="grid-container"><center>
+      <p>The St. Louis Blues win the Stanley Cup for the first time in frnachise hitory in 2019.</p>
+      <div class="grid-item"><video width="640" height="480" controls>
+        <source src="bluescup.mp4" type="video/mp4">
+      </video></div>
+      <p>The St. Louis Cardinals, led by David Freese, mount a dream-like combback in Game 6 of the 2011 World Series.</p>
+      <div class="grid-item"><video width="640" height="480" controls>
+        <source src="cardsws.mp4" type="video/mp4">
+      </video></div>
+      <p>The St. Louis City SC is announces as the next expansion team into MLS, bbringing the wildly popular sport of soccer to the Lou.</p>
+      <div class="grid-item"><video width="640" height="480" controls>
+        <source src="citysc.mp4" type="video/mp4">
+      </video></div>
+    </div>
+
+</center>
+  </div>
+
+  <div id="overlay">
+     <div class="modal">
+        <div id="close"></div>
+        <div id="loader"></div>
+     </div>
+  </div>
+
 
 <p style="clear: both;">
   </div>
 </div>
+<center>
+<div class="hed">A cool stat for Blues fans!</div>
+
+<div class="text">How long since the Blues won the Stanley Cup...</div>
+
+<div class="times">
+<div class="timebox">
+<div class="timed" id="days"></div>
+<div class="timestuff">days</div>
+</div>
+
+<div class="timebox">
+<div class="timed" id="hours"></div>
+<div class="timestuff">hours</div>
+</div>
+
+<div class="timebox">
+<div class="timed" id="minutes"></div>
+<div class="timestuff">minutes</div>
+</div>
+
+<div class="timebox">
+<div class="timed" id="seconds"></div>
+<div class="timestuff">seconds</div>
+</div>
+</div>
+
+<div class="text">Seems like just yesterday...</div>
+
+<div class="text">Let's Go Blues!</div>
+
+<script>
+
+function nWC(x) {
+	var fraction;
+	if (x % 1 !== 0) {
+		x = Number(x).toFixed(2)
+	}
+    var parts = x.toString().split(".");
+
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    if (parts.length !== 1) {
+    	fraction = true;
+    	parts = parts[0]+"."+parts[1];
+    	//parts = Number(parts);
+    }
+
+
+
+    if (fraction === true) {
+
+    }
+
+
+    return parts;
+
+}
+
+function timeCalc() {
+	var timed = document.querySelectorAll(".timed");
+	for (var i = 0; i < timed.length; i += 1) {
+		timed[i].innerHTML = "";
+	}
+	var birthday = new Date('6/12/2019 19:12');
+	var now = new Date();
+	var timeDiff = now.getTime() - birthday.getTime();
+
+	var seconds = Math.round(timeDiff / 1000);
+	var minutes = Math.round(seconds / 60);
+	var hours = Math.round(minutes / 60);
+	var days = Math.round(hours / 24);
+
+	document.getElementById("seconds").innerHTML = nWC(seconds);
+	document.getElementById("minutes").innerHTML = nWC(minutes);
+	document.getElementById("hours").innerHTML = nWC(hours);
+	document.getElementById("days").innerHTML = nWC(days);
+};
+
+timeCalc();
+
+function cdtd() {
+	timeCalc();
+	var timer = setTimeout('cdtd()',1000);
+};
+
+
+cdtd();
+
+
+
+
+</script>
+</center>
 
 <p>
   <h2>
+    <center>
   The city of St. Louis has a rich history of sports. From the underdog run of the 2019 Stanely Cup Champion St. Louis Blues, to the 11-time World Series Champion St. Louis Cardinals,
   The Lou truly lives up to the dynasty of being one of the greatest sports cities in the world! In 2022, the St. Louis City Football Club will join MLS in bringing the widley popular sport of soccer to
   St. Louis!
+</center>
 </h2>
 </p>
